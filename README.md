@@ -1,8 +1,11 @@
 # PISTE: Referentiels exogènes
 
 ## Objectifs
- 1. Mise à jour et gestion des versions de l'ensemble des référentiels externes
- 2. Report de forme automatique pour l'ensemble des valeurs définies par les réferentiels exogènes pour une notice
+ 1. Mise à jour de l'ensemble des référentiels externes
+ 2. En figeant les valeurs spécifiques liés au catalogage interne
+ 3. En proposant une interface pour gérer les conflits de merge
+ 4. En mettant à jour les notices BIB et AUT concernées
+
 
 ## Datasets
 
