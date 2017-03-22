@@ -29,3 +29,79 @@ le code attribué et la valeur correspondante. Selon le référentiel, on peut t
 * Création d'une API de requetage de ces données pour chaque valeur controlée `tag:requete`
 * API de requetage des référentiels exogènes `tag:exo_api`
 * Gestion des versions/modifications: stockage dans une BDD `tag:versionning`
+
+### Master_ref
+
+En v0.1 **création d'un fichier XLS à plat** caractérisé comme suit
+pour chaque code son référentiel correspondant pour prise de connaissance
+globale de la base
+
+En v0.1.1 identifier les valeurs à mettre à jours depuis l'extérieur
+accessible depuis une API en prenant un exemple: le code de langue
+et en croisant le référentiel BNF avec le normalisateur officiel
+dans `/api_lang`
+Etapes:
+1. Récupérer le dataset externe et interne via un script et stockage dans `/api_lang/data`
+2. Comparer et fusionner avec le ref BNF: déterminer les valeurs locales et les valeurs prioritaires
+3. Ouvrir une route api pour questionner le réf externe en temps réel?
+4. Ouvrir une route api pour questionner la base fusionnée
+5. Ouvrir une route api pour la MàJ en temps réel
+
+Problème:
+Le normalisateur officiel bLoque l'acces depuis une adresse virtuelle:
+Unauthorized
+
+
+
+
+#### code langue
+
+Elle suit la norme ISO 639-2 Alpha 3 et est officiellement maintenue par la
+Library of Congress
+
+
+* Source officielle:
+http://id.loc.gov/ Library of Congress
+mais **bloqué depuis la VM**
+
+* Sources alternatives:
+http://www-01.sil.org/iso639-3/codes.asp?order=639_2&letter=a
+
+* Anciennes versions officielles:
+https://www.loc.gov/standards/iso639-2/php/code_list.php html [derniere MàJ 2012]
+https://www.loc.gov/standards/iso639-2/ISO-639-2_utf-8.txt txt [dernière MàJ 2010]
+
+* Evolution de la la norme
+http://www.loc.gov/standards/iso639-2/php/code_changes.php
+
+* Mise à jour d'un code de langue à la fois?
+http://id.loc.gov/vocabulary/iso639-2/<code_lang>.skos.json
+
+Bloqué depuis la VM
+1. Création du dataset externe de base:
+bloqué par la VM et le proxy
+recours à la version alternative du SIL
+dans build_lang_code.py
+
+2. Création de l'api
+
+
+####s code pays
+* Norme
+(https://restcountries.eu)
+
+
+
+
+
+
+
+
+
+ou directement de http://www-01.sil.org/iso639-3/chg_detail.asp?id=2017-002
+
+- code pays:
+https://restcountries.eu/rest/v2/alpha/col
+LANGUE => PAYS
+https://restcountries.eu/rest/v2/lang/es
+<!-- https://restcountries.eu -->
