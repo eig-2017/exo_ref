@@ -39,7 +39,7 @@ globale de la base
 En v0.1.1 identifier les valeurs à mettre à jours depuis l'extérieur
 accessible depuis une API en prenant un exemple: le code de langue
 et en croisant le référentiel BNF avec le normalisateur officiel
-dans `/api_lang`
+dans `/api/lang`
 Etapes:
 1. Récupérer le dataset externe et interne via un script et stockage dans `/api_lang/data`
 2. Comparer et fusionner avec le ref BNF: déterminer les valeurs locales et les valeurs prioritaires
